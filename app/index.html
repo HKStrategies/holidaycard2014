@@ -1,0 +1,223 @@
+<!doctype html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title>holidaycard</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link rel="stylesheet" href="styles/main.css">
+    <script src="bower_components/modernizr/modernizr.js"></script>
+    <!-- for detecting screen break points -->
+    <div class="visible-xs"></div><div class="visible-sm"></div><div class="visible-md"></div><div class="visible-lg"></div><div class="visible-xl"></div>
+  </head>
+  <body>
+    <!--[if lt IE 10]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <div id="toggle-snow">
+      <small>
+        Snow Fall
+      </small>
+      <form class="btn-group" data-toggle="buttons">
+        <label class="btn btn-primary">
+          <input type="radio" name="snow" value="1" autocomplete="off">
+          On
+        </label>
+        <label class="btn btn-primary active">
+          <input type="radio" name="snow" value="0" autocomplete="off" checked>
+          Off
+        </label>
+      </form>
+    </div>
+
+    <div id="snow-container"></div>
+
+    <!-- cover -->
+    <section class="cover page" tween-container >
+      <div class="bg-bottom"
+        tween-element
+        tween-start=".5"
+        tween-end="2"
+        tween-method="to"
+        tween-css='{"transform":"scale(3)"}'></div>
+      <div class="container text-center">
+        <img src="./img/cover-title.png" class="cover-img">
+        <p>
+          <strong>
+            In 2014 Hill+Knowlton Strategies joined nobel laureates and people just like you to work toward completing One Billion Acts of Peace. We each found our own peace in the process and wish you peace this holiday season and beyond.
+          </strong>
+        </p>
+      </div>
+      <a href="/" class="hk-logo">
+        <img src="./img/HK-logo.png" alt="">
+      </a>
+    </section>
+
+    <!-- intro -->
+    <section class="intro page" tween-container >
+      <div class="container text-center">
+        <img src="./img/1bap-logo.png" width="500px" class="center-block"
+          tween-element
+          tween-start="0.1"
+          tween-end=".3"
+          tween-method="to"
+          tween-css='{"transform":"scale(1) translateY(-200px)"}'>
+        <p
+          tween-element
+          tween-start="0.25"
+          tween-end=".45"
+          tween-method="to"
+          tween-css='{"transform":"scale(1) translateY(-150px)"}'>
+          <strong>
+            In 2014, Hill+Knowlton Strategies be came a founding partner of PeaceJam Foundation's One Billion Acts of Peace (1BAOP), a campaign to inspire people around the globe to help tackle the toughest issues facing humanity.
+          </strong>
+        </p>
+        <p
+          tween-element
+          tween-start="0.4"
+          tween-end=".6"
+          tween-method="to"
+          tween-css='{"transform":"scale(1) translateY(-150px)"}'>
+          The multi-year program leverages Nobel Peace Laureates including Archbishop Desmond Tutu and the Dali Lama to recruit people around the globe to complete one billion acts of peace. Our firm has been supporting 1BAOP by donating our time and talents to support the campaign with strategic counsel, media relations and event coordination. As co-creaters of 1BAOP, H+K U.S. offices, practices and colleagues have worked together to log "acts of peace" in the march to 1 billion.
+        </p>
+      </div>
+    </section>
+
+    <!-- page 1 -->
+    <section class="page" tween-container >
+      <div class="container">
+        <div class="side">
+          <figure class="snowflake"
+            tween-element
+            tween-start="0.2"
+            tween-end=".4"
+            tween-method="from"
+            tween-css='{"transform":"translateX(1200px)","alpha":0}'>
+            <div class="carousel" style="background: url(./img/photo-1.png) center no-repeat;">
+              <img src="" alt="">
+            </div>
+          </figure>
+        </div>
+        <div class="content">
+          <div
+            tween-element
+            tween-start=".3"
+            tween-end=".5"
+            tween-method="from"
+            tween-css='{"transform":"scale(0.8) translateX(1200px)","alpha":0}'>
+            <h2>
+              H+K New York Volunteers Decorate Costumes for Hospitalized Children
+            </h2>
+            <p>
+              On September 29, 2014, H+K volunteers used their imagination to help decorate costume hats and medallions at the New York office as part of an Only Make Believe (OMB) event to help supply costumes for hospitalized children to wear during OMB performances. Only Make Believe (OMB) is a non-profit organization that brings the joy of theater to kids in hospitals around New York City and Washington DC.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- page 2 -->
+    <section class="page" tween-container >
+      <div class="container">
+        <div class="content">
+          <div
+            tween-element
+            tween-start=".3"
+            tween-end=".5"
+            tween-method="from"
+            tween-css='{"transform":"translateX(-1200px)","alpha":0}'>
+            <h2>
+              H+K New York Volunteers Decorate Costumes for Hospitalized Children
+            </h2>
+            <p>
+              On September 29, 2014, H+K volunteers used their imagination to help decorate costume hats and medallions at the New York office as part of an Only Make Believe (OMB) event to help supply costumes for hospitalized children to wear during OMB performances. Only Make Believe (OMB) is a non-profit organization that brings the joy of theater to kids in hospitals around New York City and Washington DC.
+            </p>
+          </div>
+        </div>
+        <div class="side">
+          <figure class="snowflake"
+            tween-element
+            tween-start=".2"
+            tween-end=".4"
+            tween-method="from"
+            tween-css='{"transform":"scale(0.8) translateX(-1200px)","alpha":0}'>
+            <div class="carousel" style="background: url(./img/photo-1.png) center no-repeat;">
+              <img src="" alt="">
+            </div>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- page 3 -->
+    <section class="page" tween-container >
+      <div class="container">
+        <div class="side">
+          <figure class="snowflake"
+            tween-element
+            tween-start=".2"
+            tween-end=".6"
+            tween-method="from"
+            tween-css='{"transform":"scale(0.8) translateX(-200px)","alpha":0}'>
+            <div class="carousel" style="background: url(./img/photo-1.png) center no-repeat;">
+              <img src="" alt="">
+            </div>
+          </figure>
+        </div>
+        <div class="content">
+          <div
+            tween-element
+            tween-start="0"
+            tween-end=".6"
+            tween-method="from"
+            tween-css='{"transform":"scale(0.8) translateX(200px)","alpha":0}'>
+            <h2>
+              H+K New York Volunteers Decorate Costumes for Hospitalized Children
+            </h2>
+            <p>
+              On September 29, 2014, H+K volunteers used their imagination to help decorate costume hats and medallions at the New York office as part of an Only Make Believe (OMB) event to help supply costumes for hospitalized children to wear during OMB performances. Only Make Believe (OMB) is a non-profit organization that brings the joy of theater to kids in hospitals around New York City and Washington DC.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- page 4 -->
+    <section class="page" tween-container >
+      <div class="container">
+        <div class="content">
+          <div
+            tween-element
+            tween-start=".2"
+            tween-end=".6"
+            tween-method="from"
+            tween-css='{"transform":"scale(0.8) translateX(-200px)","alpha":0}'>
+            <h2>
+              H+K New York Volunteers Decorate Costumes for Hospitalized Children
+            </h2>
+            <p>
+              On September 29, 2014, H+K volunteers used their imagination to help decorate costume hats and medallions at the New York office as part of an Only Make Believe (OMB) event to help supply costumes for hospitalized children to wear during OMB performances. Only Make Believe (OMB) is a non-profit organization that brings the joy of theater to kids in hospitals around New York City and Washington DC.
+            </p>
+          </div>
+        </div>
+        <div class="side">
+          <figure class="snowflake"
+            tween-element
+            tween-start="0"
+            tween-end=".6"
+            tween-method="from"
+            tween-css='{"transform":"scale(0.8) translateX(200px)","alpha":0}'>
+            <div class="carousel" style="background: url(./img/photo-1.png) center no-repeat;">
+              <img src="" alt="">
+            </div>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <script data-main="scripts/main" src="bower_components/requirejs/require.js"></script>
+
+</body>
+</html>

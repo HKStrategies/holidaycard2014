@@ -1,0 +1,151 @@
+$icon-font-path: "../bower_components/bootstrap-sass-official/vendor/assets/fonts/bootstrap/";
+@import "../bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap.scss";
+@import "general";
+
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  position: relative;
+  background-color: #1e4149;
+}
+
+#toggle-snow {
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin: 20px;
+  z-index: 9;
+
+  small {
+    display: block;
+    color: white;
+    text-align: center;
+  }
+}
+
+.page {
+  min-height: 80vh;
+  position: relative;
+  color: white;
+
+  > .container {
+    width: 90%;
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translateY(-50%);
+
+    .side {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      width: percentage(1/3);
+      transform: translateY(-50%);
+    }
+
+    .content {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      width: percentage(2/3);
+      padding-right: 5%;
+      transform: translateY(-50%);
+    }
+
+    .side + .content {
+      padding-left: 5%;
+      padding-right: 0;
+      left: percentage(1/3);
+    }
+
+    .content + .side {
+      left: percentage(2/3);
+    }
+  }
+
+  figure.snowflake {
+    position: relative;
+    padding-top: 100%;
+    background: url(../img/snowflake.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    .carousel {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 60%;
+      height: 60%;
+      margin: 20%;
+      border: 5px solid white;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+  }
+
+  &.cover {
+    min-height: 100vh;
+
+    .hk-logo {
+      position: absolute;
+      right: 20px;
+      top: 20px;
+    }
+
+    img.cover-img {
+      display: block;
+      max-width: 100%;
+      max-height: 40vh;
+      margin: -20vh auto 2em;
+    }
+
+    .bg-bottom {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 30%;
+      background-size: contain;
+      background-repeat: repeat-x;
+      background-position: center 5px;
+      background-image: url(../img/bg-cover-bottom.png);
+    }
+  }
+
+  &.intro {
+    min-height: 100vh;
+    background-color: white;
+    color: #5099ab;
+
+    p,
+    img {
+      transform: scale(0.5);
+    }
+  }
+}
+
+#snow-container {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+
+  background-image: url(../img/bg-snow.png), url(../img/bg-snow.png);
+  background-repeat: repeat, repeat;
+  background-position: 0 0, 40px 40px;
+
+  &.animate {
+    animation: snowfall 120s linear infinite;
+  }
+}
+
+@keyframes snowfall {
+  from { background-position: 0 0, 40px 40px; }
+  to   { background-position: 649px 542px, 1458px 1244px; }
+}
