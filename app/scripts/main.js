@@ -5,8 +5,8 @@ require.config({
     "velocity":       '../bower_components/velocity/velocity',
     "velocity-ui":    '../bower_components/velocity/velocity.ui',
 
-    "gsap-tweenlite": '../bower_components/gsap/src/uncompressed/TweenLite',
-    "gsap-CSSPlugin": '../bower_components/gsap/src/uncompressed/plugins/CSSPlugin',
+    "TweenMax":       '../bower_components/gsap/src/uncompressed/TweenMax',
+    "TweenLite":      '../bower_components/gsap/src/uncompressed/TweenLite',
 
     "bs-affix":       '../bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/affix',
     "bs-alert":       '../bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/alert',
@@ -39,7 +39,7 @@ require.config({
   }
 });
 
-require(['app','jquery','bs-button','gsap-tweenlite','gsap-CSSPlugin','utils/requestAnimationFrame','utils/scrollTween'],
+require(['app','jquery','bs-button','TweenMax','utils/requestAnimationFrame','utils/scrollTween','utils/elementAnimate'],
   function ( app, $ ) {
     'use strict';
     // use app here

@@ -1,4 +1,5 @@
 $icon-font-path: "../bower_components/bootstrap-sass-official/vendor/assets/fonts/bootstrap/";
+@import url(http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300);
 @import "../bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap.scss";
 @import "general";
 
@@ -10,86 +11,125 @@ body {
 
 body {
   position: relative;
-  background-color: #1e4149;
+  background-color: #89bdca;
+  font-family: 'Roboto Condensed', sans-serif;
 }
 
-#toggle-snow {
-  position: absolute;
-  left: 0;
-  top: 0;
-  margin: 20px;
-  z-index: 9;
+.browsehappy {
+  display: block;
+  background-color: black;
+  color: white;
+  width: 100%;
+  max-width: 2000px;
+  line-height: 1.2em;
+  padding: 5px 20px;
+  margin: 0;
+  text-align: center;
+}
 
-  small {
+#page-navigation {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  padding: 20px;
+  transform: translateY(-50%);
+
+  a {
     display: block;
-    color: white;
-    text-align: center;
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    border: 5px solid rgba( black , .5 );
+    border-radius: 50%;
+    margin: 10px 0;
+    text-decoration: none;
+
+    transition: border-color .2s linear,
+                background-color .2s linear;
+
+    &:focus,
+    &:hover,
+    &.active {
+      background-color: white;
+      border-color: rgba( white, .5 );
+    }
+
+    &.cover:focus,
+    &.cover:hover,
+    &.cover.active {
+      background-color: white;
+      border-color: rgba( white, .5 );
+    }
+
+    &.intro:focus,
+    &.intro:hover,
+    &.intro.active {
+      background-color: #37555c;
+      border-color: rgba( #37555c, 1 );
+    }
+
+    &.page-1:focus,
+    &.page-1:hover,
+    &.page-1.active {
+      background-color: #c42926;
+      border-color: rgba( #c42926, 1 );
+    }
+
+    &.page-2:focus,
+    &.page-2:hover,
+    &.page-2.active {
+      background-color: #56a62f;
+      border-color: rgba( #56a62f, 1 );
+    }
+
+    &.page-3:focus,
+    &.page-3:hover,
+    &.page-3.active {
+      background-color: #face5a;
+      border-color: rgba( #face5a, 1 );
+    }
+
+    &.page-4:focus,
+    &.page-4:hover,
+    &.page-4.active {
+      background-color: #205869;
+      border-color: rgba( #205869, 1 );
+    }
+
+    &.page-5:focus,
+    &.page-5:hover,
+    &.page-5.active {
+      background-color: #5cb646;
+      border-color: rgba( #5cb646, 1 );
+    }
+
+    &.page-6:focus,
+    &.page-6:hover,
+    &.page-6.active {
+      background-color: #37555c;
+      border-color: rgba( #37555c, 1 );
+    }
   }
 }
 
 .page {
-  min-height: 80vh;
+  min-height: 100vh;
   position: relative;
   color: white;
 
-  > .container {
-    width: 90%;
-    position: absolute;
-    top: 50%;
-    left: 5%;
-    transform: translateY(-50%);
-
-    .side {
+  @media (min-width: $screen-md-min) {
+    > .container {
+      width: 90%;
       position: absolute;
-      left: 0;
       top: 50%;
-      width: percentage(1/3);
+      left: 5%;
       transform: translateY(-50%);
-    }
-
-    .content {
-      position: absolute;
-      left: 0;
-      top: 50%;
-      width: percentage(2/3);
-      padding-right: 5%;
-      transform: translateY(-50%);
-    }
-
-    .side + .content {
-      padding-left: 5%;
-      padding-right: 0;
-      left: percentage(1/3);
-    }
-
-    .content + .side {
-      left: percentage(2/3);
-    }
-  }
-
-  figure.snowflake {
-    position: relative;
-    padding-top: 100%;
-    background: url(../img/snowflake.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-
-    .carousel {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 60%;
-      height: 60%;
-      margin: 20%;
-      border: 5px solid white;
-      border-radius: 50%;
-      overflow: hidden;
     }
   }
 
   &.cover {
     min-height: 100vh;
+    padding-top: 20px;
 
     .hk-logo {
       position: absolute;
@@ -98,54 +138,660 @@ body {
     }
 
     img.cover-img {
-      display: block;
       max-width: 100%;
-      max-height: 40vh;
-      margin: -20vh auto 2em;
+      max-height: 30vh;
+      margin: 0 0 20px;
     }
 
-    .bg-bottom {
+    img.bg-1,
+    img.bg-2 {
       position: absolute;
-      bottom: 0;
       left: 0;
+      bottom: 0;
       width: 100%;
-      height: 30%;
-      background-size: contain;
-      background-repeat: repeat-x;
-      background-position: center 5px;
-      background-image: url(../img/bg-cover-bottom.png);
+    }
+
+    img.tree-1,
+    img.tree-2,
+    img.tree-3 {
+      position: absolute;
+      top: 0;
+      height: 100%;
+
+      @media (max-width: $screen-sm-min) {
+        display: none;
+      }
+    }
+
+    img.tree-1 { left: 100px; }
+    img.tree-2 { right: 150px; }
+    img.tree-3 { right: 50px; }
+
+    p {
+      position: relative;
+      padding-left: 15px;
+      padding-right: 15px;
+      margin-top: 0;
+    }
+
+    p > a {
+      position: relative;
+    }
+
+    .snow {
+      position: absolute;
+      left: 0; top: 0;
+      width: 100%;
+      height: 100%;
+      opacity: .7;
     }
   }
 
   &.intro {
     min-height: 100vh;
     background-color: white;
-    color: #5099ab;
+    color: #37555c;
+
+    padding-bottom: 100px;
+
+    background-image: url(../img/bg-snow-2.png);
+    background-repeat: repeat;
+    background-position: 0 0;
 
     p,
-    img {
+    .logo-1bap {
       transform: scale(0.5);
     }
+
+    p.intro {
+      font-weight: bold;
+      font-size: 1.2em;
+      max-width: 900px;
+    }
+
+    .logo-1bap {
+      display: block;
+      max-width: 100%;
+      margin: 0 auto;
+      @extend .center-block;
+    }
+
+    .scroll-down {
+      padding: 20px;
+      border-radius: 10px;
+    }
+  }
+
+  &.page-1 {
+    background-color: #50baca;
+    min-height: 150vh;
+    overflow: hidden;
+
+    .container {
+      padding-bottom: 100px;
+    }
+
+    h2 {
+      color: #37555c;
+      font-size: 2em;
+      font-weight: bold;
+    }
+
+    p {
+      color: white;
+    }
+
+    figure.balloon {
+      display: block;
+
+      width: 354px;
+      height: 563px;
+      margin: 0 auto;
+
+      background-image: url(../img/page-1-balloon.png);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+
+      @media (min-width: $screen-md-min) {
+        position: absolute;
+        top: -100px;
+        right: 20px;
+      }
+
+      .carousel {
+        display: block;
+        width: 324px;
+        height: 324px;
+        margin: 15px;
+        border-radius: 50%;
+        overflow: hidden;
+
+        ul {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+        }
+
+        img {
+          display: block;
+          width: 100%
+        }
+      }
+
+      .carousel-controls {
+        position: absolute;
+        top: 140px;
+        left: -15px;
+        width: 380px;
+        z-index: 9;
+
+        button {
+          display: block;
+          width: 40px;
+          height: 40px;
+          line-height: 40px;
+          background-color: #c42926;
+          color: #face5a;
+          padding: 0;
+          border: none;
+          border-radius: 50%;
+          margin: 10px 0;
+          text-align: center;
+          cursor: pointer;
+          outline: 0;
+
+          &:hover {
+            background-color: #face5a;
+            color: #c42926;
+          }
+
+          &[rel=next] {
+            position: absolute;
+            right: 0;
+            top: 0;
+          }
+        }
+      }
+    }
+
+    .ferris-wheel {
+      position: absolute;
+      left: 50%;
+      bottom: -400px;
+      margin-left: -100px;
+      transform-origin: 50%;
+    }
+
+    .lights {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+    }
+
+    .clouds {
+      position: absolute;
+      bottom: 100px;
+      left: -500px;
+    }
+  }
+
+  &.page-2 {
+    min-height: 150vh;
+    overflow: hidden;
+
+    background-image: url(../img/page-2-bg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    .container {
+      top: 10%;
+      transform: none;
+
+      @media (max-width: $screen-md-min) {
+         padding-top: 100px;
+         padding-bottom: 800px;
+      }
+    }
+
+    h2 {
+      color: #56a62f;
+      font-size: 2em;
+      font-weight: bold;
+    }
+
+    p {
+      color: white;
+    }
+
+    .fence {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+    }
+
+    .paddle {
+      position: absolute;
+      bottom: -40px;
+      width: 237px;
+      height: 800px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: top center;
+      background-image: url(../img/page-2-paddle.png);
+
+      figure {
+        display: block;
+        height: 300px;
+        margin: 70px 20px;
+
+        background-color: white;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+
+      &.a {
+        left: 45%;
+        transform: rotate(5deg);
+
+        figure {
+          background-image: url(../img/pics/2.jpg);
+        }
+      }
+
+      &.b {
+        left: 65%;
+        bottom: -100px;
+        transform: rotate(15deg);
+
+        figure {
+          background-image: url(../img/pics/3.jpg);
+        }
+      }
+
+      @media (max-width: $screen-sm-min) {
+        &.a {
+          left: 5%;
+        }
+
+        &.b {
+          left: auto;
+          right: 5%;
+        }
+      }
+    }
+  }
+
+  &.page-3 {
+    min-height: 110vh;
+    overflow: hidden;
+
+    background-image: url(../img/page-3-bg.jpg);
+    background-position: top left;
+    background-repeat: repeat;
+
+    .container {
+      padding-top: 80px;
+      padding-bottom: 100px;
+    }
+
+    h2 {
+      color: #face5a;
+      font-size: 2em;
+      font-weight: bold;
+    }
+
+    p {
+      color: white;
+    }
+
+    .bag {
+      display: block;
+      max-width: 55vw;
+      max-height: 95vh;
+      margin: 0 auto;
+
+      @media (min-width: $screen-md-min) {
+        position: absolute;
+        left: 0;
+        bottom: -5vh;
+      }
+    }
+  }
+
+  &.page-4 {
+    min-height: 130vh;
+    overflow: hidden;
+
+    background-color: #edc78d;
+    background-image: url(../img/page-4-bg.jpg);
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .container {
+      top: 5%;
+      transform: none;
+
+      @media (max-width: $screen-md-min) {
+         padding-top: 100px;
+         padding-bottom: 500px;
+      }
+    }
+
+    h2 {
+      color: #c41230;
+      font-size: 2em;
+      font-weight: bold;
+    }
+
+    p {
+      color: #333333;
+    }
+
+    .bottom {
+      position: absolute;
+      bottom: 0;
+      left: 10%;
+      width: 80%;
+    }
+
+    img.coffee {
+      position: absolute;
+      top: 64px;
+      right: 50px;
+    }
+
+    img.shadow {
+      position: absolute;
+      top: 0;
+      right: 54px;
+
+      transform-origin: 65% 60%;
+      transform: rotate(-45deg);
+    }
+  }
+
+  &.page-5 {
+    min-height: 100vh;
+    overflow: hidden;
+
+    background-color: #a2221f;
+    background-image: url(../img/page-5-bg.jpg);
+    background-position: bottom center;
+
+    overflow: hidden;
+
+    .container {
+      padding-bottom: 100px;
+    }
+
+    h2 {
+      color: #56a62f;
+      font-size: 2em;
+      font-weight: bold;
+    }
+
+    p {
+      color: white;
+    }
+
+    .wreath {
+      position: relative;
+      display: block;
+      top: -20vw;
+      max-width: 571px;
+      padding-top: 130%;
+      margin: 0 auto;
+
+      background-image: url(../img/page-5-wreath.png);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+
+      @media (min-width: $screen-md-min) {
+        position: absolute;
+        right: 30px;
+        top: -200px;
+        width: 571px;
+        height: 745px;
+        padding-top: 0;
+      }
+
+      .carousel {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 350px;
+        height: 350px;
+        background-color: white;
+        margin: 110.5px;
+        border: 5px solid #face5a;
+        border-radius: 50%;
+        overflow: hidden;
+
+        ul {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+        }
+
+        img {
+          display: block;
+          width: 100%
+        }
+      }
+
+      @media (max-width: $screen-md-min) {
+        top: 0;
+
+        .carousel {
+          bottom: 95px;
+        }
+      }
+
+      @media (max-width: $screen-sm-min) {
+        background-image: none;
+        padding-top: 400px;
+
+        .carousel {
+          top: 50%;
+          left: 50%;
+          transform: translate3d(-50%,-50%,0);
+          margin: 0;
+        }
+      }
+    }
+
+    .carousel-controls {
+      position: absolute;
+      top: 240px;
+      right: 120px;
+      width: 390px;
+      z-index: 9;
+
+      @media (max-width: $screen-md-min) {
+        top: 60%;
+        left: 50%;
+        right: auto;
+        transform: translate3d(-50%,-50%,0);
+      }
+
+      @media (max-width: $screen-sm-min) {
+        top: 50%;
+      }
+
+      button {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        background-color: #face5a;
+        color: black;
+        padding: 0;
+        border: none;
+        border-radius: 50%;
+        margin: 10px 0;
+        text-align: center;
+        cursor: pointer;
+        outline: 0;
+
+        &[rel=next] {
+          float: right;
+        }
+
+        &:hover {
+          background-color: #face5a;
+          color: #c42926;
+        }
+      }
+    }
+  }
+
+  &.page-6 {
+    background-color: white;
+    background-image: url(../img/page-6-bg.jpg);
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    overflow: hidden;
+
+    text-align: center;
+
+    .container {
+      position: relative;
+      left: 0;
+      top: 0;
+      padding-top: 50px;
+      padding-bottom: 100px;
+      margin: 0 auto;
+      transform: none;
+
+      perspective: 500px;
+
+      @media (min-width: $screen-md-min) {
+        padding-bottom: 0;
+      }
+    }
+
+    h2 {
+      color: #37555c;
+      font-size: 2em;
+      font-weight: bold;
+      max-width: 1200px;
+      text-align: center;
+
+      @media (min-width: $screen-sm-min) {
+        clear: both;
+      }
+    }
+
+    .snowflake {
+      display: block;
+      position: relative;
+      width: 100%;
+      margin: 30px auto;
+
+      @media (min-width: $screen-sm-min) {
+        display: inline-block;
+        width: 40%;
+        margin: 2%;
+
+        &:nth-child(2n+1) {
+          clear: left;
+        }
+      }
+
+      @media (min-width: $screen-md-min) {
+        width: 20%;
+
+        &.snowflake-1  { left: -50px; }
+        &.snowflake-2  { top: 45px; }
+        &.snowflake-4  { top: 50px; left: -50px; }
+        &.snowflake-7  { top: 50px; }
+        &.snowflake-8  { top: -100px; left: -20px; }
+        &.snowflake-10  { top: -20px; }
+        &.snowflake-11  { top: -100px; }
+        &.snowflake-12  { top: -120px; left: -200px }
+        &.snowflake-13  { top: -120px; left: 200px;}
+
+        transition: transform .2s linear;
+
+        &:hover {
+          transform: scale(1.5);
+        }
+      }
+    }
+
+    .logo {
+      img {
+        display: block;
+        margin: 50px auto;
+
+        @media (min-width: $screen-sm-min) {
+          clear: both;
+        }
+      }
+    }
+
+    .bottom {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+    }
+
+    .tag {
+      position: absolute;
+      bottom: 10px;
+      left: 0;
+      width: 100%;
+      text-align: middle;
+    }
+
+    @media (max-width: $screen-sm-min) {
+      h2,
+      .logo img {
+        transform: none !important;
+      }
+    }
+  }
+
+  .scroll-down {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
 
-#snow-container {
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-
+.bg-snow {
   background-image: url(../img/bg-snow.png), url(../img/bg-snow.png);
   background-repeat: repeat, repeat;
   background-position: 0 0, 40px 40px;
-
-  &.animate {
-    animation: snowfall 120s linear infinite;
-  }
+  animation: snowfall 120s linear infinite;
 }
 
 @keyframes snowfall {
   from { background-position: 0 0, 40px 40px; }
   to   { background-position: 649px 542px, 1458px 1244px; }
+}
+
+@keyframes rotate {
+  from { transform: rotate(0)     translate3d(0,0,0) }
+  to   { transform: rotate(1turn) translate3d(0,0,0) }
+}
+
+
+@keyframes float {
+  0%   { transform: translate3d(0,-20px,0) }
+  25%  { transform: translate3d(0,0,0)     }
+  50%  { transform: translate3d(0,20px,0)  }
+  75%  { transform: translate3d(0,0,0)     }
+  100% { transform: translate3d(0,-20px,0) }
 }
