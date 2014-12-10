@@ -132,9 +132,17 @@ body {
     padding-top: 20px;
 
     .hk-logo {
-      position: absolute;
-      right: 20px;
-      top: 20px;
+      img {
+        display: block;
+        margin: 20px auto;
+      }
+
+      @media (min-width: $screen-md-min ) {
+        position: absolute;
+        left: 20px;
+        top: 20px;
+        z-index: 9;
+      }
     }
 
     img.cover-img {
@@ -192,15 +200,13 @@ body {
     background-color: white;
     color: #37555c;
 
-    padding-bottom: 100px;
-
     background-image: url(../img/bg-snow-2.png);
     background-repeat: repeat;
     background-position: 0 0;
 
-    p,
-    .logo-1bap {
-      transform: scale(0.5);
+    html.touch & {
+      padding-top: 50px;
+      padding-bottom: 50px;
     }
 
     p.intro {
@@ -214,11 +220,6 @@ body {
       max-width: 100%;
       margin: 0 auto;
       @extend .center-block;
-    }
-
-    .scroll-down {
-      padding: 20px;
-      border-radius: 10px;
     }
   }
 
@@ -235,14 +236,26 @@ body {
       color: #37555c;
       font-size: 2em;
       font-weight: bold;
+
+      @media (min-width: $screen-md-min) {
+        margin-left: 50px;
+      }
     }
 
     p {
       color: white;
+
+      @media (min-width: $screen-md-min) {
+        margin-left: 50px;
+      }
     }
 
     figure.balloon {
+      position: relative;
       display: block;
+
+      left: 50%;
+      transform: translateX(-50%);
 
       width: 354px;
       height: 563px;
@@ -253,10 +266,13 @@ body {
       background-position: center;
       background-size: cover;
 
+      @media (min-width: $screen-sm-min) and (max-width: $screen-md-min) {
+        left: 20%;
+      }
+
       @media (min-width: $screen-md-min) {
         position: absolute;
         top: -100px;
-        right: 20px;
       }
 
       .carousel {
@@ -266,6 +282,11 @@ body {
         margin: 15px;
         border-radius: 50%;
         overflow: hidden;
+
+        @media (max-width: $screen-md-min) {
+          position: relative;
+          top: 15px;
+        }
 
         ul {
           list-style: none;
@@ -429,6 +450,7 @@ body {
   &.page-3 {
     min-height: 110vh;
     overflow: hidden;
+    padding-top: 50px;
 
     background-image: url(../img/page-3-bg.jpg);
     background-position: top left;
@@ -525,6 +547,10 @@ body {
     background-position: bottom center;
 
     overflow: hidden;
+
+    @media (max-width: $screen-md-min) {
+      padding-top: 50px;
+    }
 
     .container {
       padding-bottom: 100px;
@@ -760,13 +786,6 @@ body {
         transform: none !important;
       }
     }
-  }
-
-  .scroll-down {
-    position: absolute;
-    bottom: 30px;
-    left: 50%;
-    transform: translateX(-50%);
   }
 }
 

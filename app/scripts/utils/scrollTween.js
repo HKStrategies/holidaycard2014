@@ -1,6 +1,8 @@
 define(['jquery','utils/windowWatch','utils/stripJsonComments','TweenMax'],
   function ( $, WW, stripJsonComments ) {
 
+    if ( Modernizr.touch ) return; // exit
+
     $(document).on('screenSizeChanged', function ( e ) {
 
       tweenSetup();

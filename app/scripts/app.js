@@ -36,21 +36,6 @@ define(['jquery','utils/windowWatch','TweenMax'],
 
     // page navigation
     var $pageNavigation = $('#page-navigation');
-    $('.page').each( function ( index, page ) {
-      var $page   = $( page );
-      var id      = $page.attr('id');
-
-      var $anchor = $('<a href="#' + id + '" scroll-to="#' + id + '" class="' + id + '"></a>');
-
-      if ( index == 0 )
-        $anchor.addClass('active');
-
-      if ( id == 'intro' )
-        $anchor.attr('scroll-to-offset', -200 );
-
-      $pageNavigation.append( $anchor );
-    });
-
     $pageNavigation.on('click','a', function (e) {
       $pageNavigation.find('a.active').removeClass('active');
       $( e.currentTarget ).addClass('active');

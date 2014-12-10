@@ -21,6 +21,10 @@
 
       <div class="snow bg-snow"></div>
 
+      <a href="/" class="hk-logo">
+        <img src="./img/HK-logo.png" alt="Hill+Knowlton Strategies">
+      </a>
+
       <img src="./img/cover-bg-1.png" alt="" class="bg-1" tween-element >
       <script type="text/animation">
         [{
@@ -36,7 +40,7 @@
         <img src="./img/cover-title.png" class="cover-img">
         <br>
         <strong>
-          In 2014 Hill+Knowlton Strategies joined nobel laureates and people just like you to work toward completing One Billion Acts of Peace. We each found our own peace in the process and wish you peace this holiday season and beyond.
+          In 2014, Hill+Knowlton Strategies joined Nobel Peace Laureates and people just like you to work toward completing One Billion Acts of Peace. In that spirit, we wish you peace this holiday season and beyond.
         </strong>
       </p>
       <script type="text/animation">
@@ -88,12 +92,6 @@
         }]
       </script>
 
-      <a href="/" class="hk-logo">
-        <img src="./img/HK-logo.png" alt="">
-      </a>
-
-      <!--  -->
-
     </section>
 
     <!-- intro -->
@@ -102,28 +100,43 @@
         <img src="./img/1bap-logo.png" width="500px" class="logo-1bap" tween-element >
         <script type="text/animation">
           [{
-            "method": "to",
+            "method": "from",
             "vars": {
-              "y": -120,
-              "scale": 1
-            }
+              "scale": 0.5
+            },
+            "duration": 0.5
           },
           {
-            "delay": 2
+            "method": "to",
+            "vars": {
+              "y": -120
+            },
+            "delay": -1
+          },
+          {
+            "delay": 3
           }]
         </script>
         <p class="intro" tween-element >
-          In 2014, Hill+Knowlton Strategies be came a founding partner of PeaceJam Foundation's One Billion Acts of Peace (1BAOP), a campaign to inspire people around the globe to help tackle the toughest issues facing humanity.
+          Hill+Knowlton Strategies became a founding partner of the PeaceJam Foundation's One Billion Acts of Peace (1BAOP), a campaign to inspire people around the globe to help tackle the toughest issues facing humanity.
         </p>
         <script type="text/animation">
           [{
             "method": "to",
             "vars": {
               "y": -100,
-              "scale": 1,
               "ease": "Back.easeOut"
             },
             "delay": 1,
+            "duration": 0.5
+          },
+          {
+            "method": "from",
+            "vars": {
+              "scale": 0.5,
+              "ease": "Back.easeOut"
+            },
+            "delay": -0.5,
             "duration": 0.5
           },
           {
@@ -131,17 +144,25 @@
           }]
         </script>
         <p tween-element >
-          The multi-year program leverages Nobel Peace Laureates including Archbishop Desmond Tutu and the Dali Lama to recruit people around the globe to complete one billion acts of peace. Our firm has been supporting 1BAOP by donating our time and talents to support the campaign with strategic counsel, media relations and event coordination. As co-creaters of 1BAOP, H+K U.S. offices, practices and colleagues have worked together to log "acts of peace" in the march to 1 billion.
+          The multi-year program leverages Nobel Peace Laureates including Archbishop Desmond Tutu and His Holiness the Dali Lama to recruit people around the globe to complete one billion acts of peace. Our firm has been supporting 1BAOP by donating our time and talent to support the campaign with strategic counsel, media relations and event coordination. As co-creators of 1BAOP, H+K U.S. offices, practices and colleagues have worked together to log "acts of peace" in the march toward one billion.
         </p>
         <script type="text/animation">
           [{
             "method": "to",
             "vars": {
               "y": -100,
-              "scale": 1,
               "ease": "Back.easeOut"
             },
             "delay": 1,
+            "duration": 0.5
+          },
+          {
+            "method": "from",
+            "vars": {
+              "scale": 0.5,
+              "ease": "Back.easeOut"
+            },
+            "delay": -0.5,
             "duration": 0.5
           },
           {
@@ -149,24 +170,6 @@
           }]
         </script>
       </div>
-      <a href="#page-1" class="scroll-down" scroll-to="#page-1" animate-element repeat >
-        <img src="./img/scroll-down-intro.png" alt="">
-      </a>
-      <script type="text/animation">
-        [{
-          "method": "to",
-          "vars": {
-            "y": 10
-          },
-          "duration": 0.25
-        },
-        {
-          "method": "to",
-          "vars": {
-            "y": 0
-          }
-        }]
-      </script>
     </section>
 
     <!-- page 1 -->
@@ -351,7 +354,7 @@
               }]
             </script>
             <p tween-element >
-              Colleagues in Austin participated in The Trail Foundation’s kayak cleanup event on June 4, 2014. H+K volunteers kayaked along the new Boardwalk at the Butler Trail on Lady Bird Lake in downtown Austin, and picked up litter along the shoreline in advance of the Boardwalk’s opening on June 7. The opening of the Boardwalk was an important event for Austinites, providing alternative transportation options, a safer and more scenic route along one of the city’s most used recreational areas, and easier access to parkland for residents of East Austin, a traditionally underserved area.
+              Colleagues in Austin participated in The Trail Foundation’s kayak cleanup event on June 4, 2014. H+K volunteers kayaked along the new Boardwalk at the Butler Trail on Lady Bird Lake in downtown Austin, and picked up litter along the shoreline in advance of the Boardwalk’s opening on June 7. The opening of the Boardwalk was an important event for Austinites, providing alternative transportation options, a safer and more scenic route along one of the city’s most used recreational areas and easier access to parkland for residents of East Austin, a traditionally underserved area.
             </p>
             <script type="text/animation">
               [{
@@ -379,11 +382,10 @@
           "method": "from",
           "vars": {
             "y": 500,
-            "alpha": 0,
             "ease": "Back.easeOut"
           },
           "delay": 0.25,
-          "duration": 0.25
+          "duration": 0.1
         },
         {
           "duration": 0.5
@@ -397,10 +399,9 @@
           "method": "from",
           "vars": {
             "y": 500,
-            "alpha": 0,
             "ease": "Back.easeOut"
           },
-          "delay": 0.5,
+          "delay": 0.25,
           "duration": 0.25
         },
         {
@@ -424,7 +425,7 @@
           "duration": 2
         },
         {
-          "duration": 2
+          "duration": 3
         }]
       </script>
       <div class="container">
@@ -451,7 +452,7 @@
               }]
             </script>
             <p tween-element >
-              On October 3, 2014, members from the Chicago office participated in a half-day volunteer program at the Greater Chicago Food Depository. H+K team members sorted through 7,925 pounds of donated items in order to salvage usable food that will be supplied to partner organizations. The Greater Chicago Food Depository makes a daily impact across Cook County, Illinois, with a network of 650 pantries, soup kitchens, shelters, mobile programs, children’s programs, older adult programs and innovative responses that address the root causes of hunger.
+              Members of our Chicago office participated in a half-day volunteer program at the Greater Chicago Food Depository. H+K team members sorted through several tons of donated items in order to salvage usable food that will be supplied to partner organizations. The Greater Chicago Food Depository makes a daily impact across Cook County, Illinois, with a network of 650 pantries, soup kitchens, shelters, mobile programs, children’s programs, older adult programs and innovative responses that address the root causes of hunger.
             </p>
             <script type="text/animation">
               [{
@@ -464,7 +465,7 @@
                 "duration": 0.5
               },
               {
-                "duration": 0.25
+                "duration": 0.5
               }]
             </script>
           </div>
@@ -473,13 +474,13 @@
     </section>
 
     <!-- page 4 -->
-    <section id="page-4" class="page page-4" tween-container scroll-to-offset="50" >
+    <section id="page-4" class="page page-4" tween-container >
       <img src="./img/page-4-bottom.png" class="bottom">
       <div class="container">
         <div class="row">
           <div class="col-md-5">
             <h2 tween-element >
-              Helping Young People Explore their Potential in Communications
+              Helping Young People Explore their Potential in Communication
             </h2>
             <script type="text/animation">
               [{
@@ -497,7 +498,7 @@
               }]
             </script>
             <p tween-element >
-              On October 23, 2014, H+K colleagues in Washington, D.C., hosted local LAGRANT students for an interactive career workshop. During the workshop, students learned about career paths in communications and had an opportunity to have their resumes reviewed by H+K employees. The LAGRANT Foundation was established to address the lack of diversity in advertising, marketing and public relations fields. It provides students of all backgrounds with scholarships, career development workshops, professional development, mentor relationships and internships.
+              Our H+K colleagues in Washington, D.C., hosted local LAGRANT students for an interactive career workshop. During the workshop, students learned about career paths in communications and had an opportunity to have their resumes reviewed by H+K employees. The LAGRANT Foundation was established to address the lack of diversity in advertising, marketing and public relations fields. It provides students of all backgrounds with scholarships, career development workshops, professional development, mentor relationships and internships.
             </p>
             <script type="text/animation">
               [{
@@ -639,7 +640,7 @@
               }]
             </script>
             <p tween-element >
-              On September 29, 2014, H+K volunteers in New York used their imaginations to help decorate costume hats and medallions as part of an Only Make Believe (OMB) event to help supply costumes for hospitalized children to wear during OMB performances. OMB is a non-profit organization that brings the joy of theater to kids in hospitals around New York City and Washington, D.C.
+              H+K volunteers in New York used their Imaginations to help decorate costume hats and medallions as part of an Only Make Believe (OMB) event to help supply costumes for hospitalized children to wear during OMB performances. OMB is a non-profit organization that brings the joy of theater to kids in hospitals around New York City and Washington, D.C.
             </p>
             <script type="text/animation">
               [{
@@ -661,7 +662,7 @@
     </section>
 
     <!-- page 6 -->
-    <section id="page-6" class="page page-6" tween-container scroll-to-offset="50" >
+    <section id="page-6" class="page page-6" tween-container >
       <img src="./img/page-6-bottom.png" alt="" class="bottom">
       <div class="container">
         <div class="row">
@@ -676,7 +677,7 @@
             <img src="./img/snowflake-6.png" class="snowflake snowflake-6">
             <img src="./img/snowflake-7.png" class="snowflake snowflake-7">
 
-            <h2 tween-element >
+            <h2 id="sign-off" tween-element scroll-to-offset="-100">
               Wishing you peace and joy this holiday season.
             </h2>
             <script type="text/animation">
@@ -726,7 +727,16 @@
 
     </section>
 
-    <nav id="page-navigation" class="hidden-xs"></nav>
+    <nav id="page-navigation" class="hidden-xs">
+      <a href="#cover" scroll-to="#cover" class="cover"></a>
+      <a href="#intro" scroll-to="#intro" class="intro"></a>
+      <a href="#page-1" scroll-to="#page-1" class="page-1"></a>
+      <a href="#page-2" scroll-to="#page-2" class="page-2"></a>
+      <a href="#page-3" scroll-to="#page-3" class="page-3"></a>
+      <a href="#page-4" scroll-to="#page-4" class="page-4"></a>
+      <a href="#page-5" scroll-to="#page-5" class="page-5"></a>
+      <a href="#sign-off" scroll-to="#sign-off" class="page-6 active"></a></nav>
+    </nav>
 
     <script data-main="scripts/main" src="bower_components/requirejs/require.js"></script>
 
